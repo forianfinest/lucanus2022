@@ -1,6 +1,8 @@
 # lucanus2022
 Scripts from "Genomic tools for comparative conservation genetics among three recently diverged stag beetles (Lucanus, Lucanidae)"
 
+Paper: https://www.researchgate.net/publication/373101595_Genomic_tools_for_comparative_conservation_genetics_among_three_recently_diverged_stag_beetles_Lucanus_Lucanidae
+
 DRYAD: https://datadryad.org/dataset/doi:10.5061/dryad.jh9w0vtft
 
 Zenodo: https://zenodo.org/records/7857501
