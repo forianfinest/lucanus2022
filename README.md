@@ -1,2 +1,8 @@
 # lucanus2022
 Scripts from "Genomic tools for comparative conservation genetics among three recently diverged stag beetles (Lucanus, Lucanidae)"
+
+DRYAD: https://datadryad.org/dataset/doi:10.5061/dryad.jh9w0vtft
+
+Zenodo: https://zenodo.org/records/7857501
+
+scripts: folder with the scripts used per each analyses, mostly in .txt files that can be opened in a way that said scripts can be copied, pasted and used. In the "fsc" folder, there are the Bash scripts used for running the fastsimcoal analyses, both per each model ("fsc_scripts.txt") and the bootstrap for getting a confidence interval ("bootstrapping_fsc.txt"). "ipyrad-analysis tools" has Python scripts used for some tools present in the ipyrad suite: PCA ("scripts_for_PCA.txt"), STRUCTURE ("scripts_structure.txt") and treemix ("treemix_scripts.txt"). "r" presents the R scripts used in this study. Specifically, "aic_fsc" has a modification of a previously released R script (available in https://github.com/speciationgenomics/scripts/blob/master/calculateAIC.sh) for calculating AICs (the ones presemt in the subfolder "AIC_computed" of the "fsc" folder), "aic_weights" has the scripts used for calculating weighted AICs, "bppr" contains the scripts used for the bppr package, "filtering" contains the scripts used for filtering the original VCF file from Stacks and keep only the SNPs with less than 20% of sites missing, "lk" contains the scripts used for plotting the likelyhood distribution for each model. "plot_r_stairwayplot" has the scripts for plotting the original Stairway Plot 2 output files in R and "snapclust" has the scripts for filtering loci from STRUCTURE files and make the snapclust analyses.
