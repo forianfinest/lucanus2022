@@ -1,0 +1,16 @@
+library(bppr)
+mcmc<-read.table(file="mcmc.txt", header=TRUE, sep="")
+library(ape)
+library("coda")
+tree<-read.tree(file = "FigTree.tre", text = "((HC: 0.000148, ML: 0.000148)HCML[&height_95%_HPD={0.00012800, 0.00016700}]: 0.000303, NT: 0.000450)HCMLNT[&height_95%_HPD={0.00042600, 0.00047500}];", tree.names = NULL, skip = 0,
+comment.char = "", keep.multi = FALSE)
+View(tree)
+strict <- bppr::msc2time.r(mcmc, u.m = 2.9e-9,
+u.sd = 0.00001e-9, g.m = 4, g.sd = 0.00001)
+apply(strict, 2, mean)
+strictint<-coda::HPDinterval(coda::as.mcmc(strict))
+coda::HPDinterval(coda::as.mcmc(strict))
+pdf(file="lucanus_superstrict.pdf")
+mcmc2densitree(tree, strict, "t_", thin=0.05, alpha=0.01)
+title(xlab="Divergence time")
+dev.off()

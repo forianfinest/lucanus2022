@@ -1,0 +1,40 @@
+HC_nudoubledec<-scan("HC_nudoubledec.lhoods")
+HC_pastdecrease<-scan("HC_pastdecrease.lhoods")
+HC_recdecrease<-scan("HC_recdecrease.lhoods")
+HC_increase<-scan("HC_increase.lhoods")
+HC_oneevent<-scan("HC_oneevent.lhoods")
+HC_popc<-scan("HC_popc.lhoods")
+pdf(file = "HC_lk_distr.pdf")
+par(mfrow=c(1,1))
+boxplot(range = 0,HC_oneevent,HC_nudoubledec,HC_recdecrease,HC_pastdecrease,
+HC_popc, HC_increase, ylab="Likelihood",xaxt="n")
+axis(side=1,at=1:6, labels=c("cdec","doubledec","recdec","pastdec","cpop","inc"))
+dev.off()
+
+ML_nudoubledec<-scan("ML_nudoubledec.lhoods")
+ML_pastdecrease<-scan("ML_pastdecrease.lhoods")
+ML_recdecrease<-scan("ML_recdecrease.lhoods")
+ML_increase<-scan("ML_increase.lhoods")
+ML_oneevent<-scan("ML_oneevent.lhoods")
+ML_popc<-scan("ML_popc.lhoods")
+pdf(file = "ML_lk_distr.pdf")
+par(mfrow=c(1,1))
+boxplot(range = 0,ML_oneevent,ML_nudoubledec,ML_recdecrease,ML_pastdecrease,
+ML_popc, ML_increase, ylab="Likelihood",xaxt="n")
+axis(side=1,at=1:6, labels=c("cdec","doubledec","recdec","pastdec","cpop","inc"))
+dev.off()
+
+NT_nudoubledec<-scan("NT_nudoubledec.lhoods")
+NT_pastdecrease<-scan("NT_pastdecrease.lhoods")
+NT_recdecrease<-scan("NT_recdecrease.lhoods")
+NT_increase<-scan("NT_increase.lhoods")
+NT_oneevent<-scan("NT_oneevent.lhoods")
+NT_popc<-scan("NT_popc.lhoods")
+pdf(file = "NT_lk_distr.pdf")
+par(mfrow=c(1,1))
+boxplot(range = 0,NT_oneevent,NT_nudoubledec,NT_recdecrease,NT_pastdecrease,
+NT_popc, NT_increase, ylab="Likelihood",xaxt="n")
+axis(side=1,at=1:6, labels=c("cdec","doubledec","recdec","pastdec","cpop","inc"))
+dev.off()
+
+
